@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+body{
+    min-height: 100vh;
+    background: #efeff2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator{
+    width: 330px;
+    height: 650px;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    background: #f7f7f7;
+    overflow: hidden;
+}
+
+form input{
+    width: 90%;
+    height: 170px;
+    border-radius: 15px;
+    font-size: 2rem;
+    padding: 1rem;
+    margin-left: 17.5px;
+    margin-top: 17.5px;
+    color: #030300;
+    background: #f5f5f5;
+    text-align: right;
+    pointer-events: none;
+    border: none;
+}
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+}
+button{
+    background: rgb(236, 236, 236);
+    border: 1px solid #edf1f4;
+    color: #030303;
+    flex: 0 0 22%;
+    margin: 5px 0;
+    width: auto;
+    height: 65px;
+    font-size: 22px;
+    font-weight: 300;
+    border-radius: 100%;
+    cursor: pointer;
+}
+button:hover{
+    background: rgb(221, 221, 221);
+}
+.btn-gam,
+.btn-plus,
+.btn-div,
+.btn-frchxili,
+.btn-minus{
+    color: rgb(145, 209, 145);
+}
+.btn-clear{
+    width: 65px;
+    height: 65px;
+    color: rgb(255, 89, 89);
+    border-radius: 50px;
+}
+.btn-equal{
+    background: rgb(145, 209, 145);
+    color: #f5f5f5;
+}
+.btn-equal:hover{
+    background: rgb(152, 223, 152);
+}
+.calculator #toggle{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 37%;
+    margin-top: 20px;
+    width: 80px;
+    height: 40px;
+    border-radius: 160px;
+    background: #222;
+    transition: 0.5s ease;
+    cursor: pointer;
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1)
+                inset 0 8px 8px rgba(0, 0, 0, 0.1)
+                inset 0 -4px 4px rgba(0, 0, 0, 0.1)
+}
+#toggle .indicator{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to bottom, rgb(229, 226, 226), rgb(161, 159, 159));
+    border-radius: 50%;
+    transform: scale(0.9);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5)
+                inset 0 4px 4px rgba(255, 255, 255, 0.2)
+                inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+    transition: 0.5s;
+}
+#toggle.active .indicator{
+    background: linear-gradient(to bottom, #444, #222);
+}
+
+#toggle.active{
+    background: rgb(236, 236, 236);
+    box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1)
+                inset 0 2px 8px rgba(0, 0, 0, 0.1)
+                inset 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+#toggle.active .indicator{
+    left: 40px;
+}
+body.active{
+    background: #222;
+    color: #f5f5f5;
+}
+#toggle.active .btn{
+    color: #030300;
+}
+body.dark{
+    background: #201f1f;
+}
+.dark .calculator{
+    background: #131212;
+}
+.dark .calculator .buttons button{
+    border: none;
+    background: #3d3d3d67;
+    color: #f5f5f5;
+}
+.dark .screen{
+    background: #131212;
+    color: #f5f5f5;
+}
+.dark .calculator .buttons .btn-equal{
+    background: rgb(145, 209, 145);
+    color: #f5f5f5;
+}
+.dark .calculator .buttons .btn-clear{
+    color: rgb(255, 89, 89);
+}
+.dark .calculator .buttons .btn-gam,
+.dark .calculator .buttons .btn-plus,
+.dark .calculator .buttons .btn-minus,
+.dark .calculator .buttons .btn-div,
+.dark .calculator .buttons .btn-frchxili{
+    color: rgb(145, 209, 145);
+}
